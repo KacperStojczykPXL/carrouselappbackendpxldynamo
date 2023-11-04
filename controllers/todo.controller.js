@@ -1,7 +1,7 @@
 const aws = require('./../aws');
 const uuid = require('uuid');
 
-const tableName = process.env.AWS_TABLE_NAME || todo;
+const tableName = todo;
 
 exports.getTodos = (req, res) => {
     const params = {
