@@ -1,5 +1,6 @@
 const AWS = require('aws-sdk');
-
+const region = 'us-east-1'; 
+AWS.config.update({ region: 'us-east-1' });
 /*
 # These settings can be used if no propper IAM roles are set up or when running locally
 AWS.config.update({accessKeyId: process.env.AWS_ACCESS_KEY_ID});
