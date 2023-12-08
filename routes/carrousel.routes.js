@@ -2,7 +2,7 @@ const express = require('express');
 const carrouselRouter = express.Router();
 const { S3Client, ListObjectsV2Command } = require('@aws-sdk/client-s3');
 
-const bucketName = 'images-carrousel-kacperstojczyk2023-prod';
+const bucketName = process.env.BUCKET_NAME || 'default-bucket'
 
 async function getS3ObjectUrls() {
   const client = new S3Client({ region: "us-east-1" })
