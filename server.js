@@ -8,6 +8,7 @@ const todoRoutes = require('./routes/todo.routes');
 const carrouselRoutes = require('./routes/carrousel.routes');
 
 const app = express();
+const tracer = require('dd-trace').init()
 
 const db = require('./aws');
 
